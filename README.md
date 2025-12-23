@@ -106,3 +106,6 @@ Evaluation is performed on a single dataset
 
 Results are not suitable for clinical use
 
+The full training and evaluation pipeline is provided in the notebook located in the `notebook/` directory.
+
+

@@ -16,8 +16,6 @@ Mild dementia
 
 Moderate dementia
 
-The focus of this work is practical experimentation rather than achieving clinical-level performance.
-
 Dataset
 
 The ImagesOASIS dataset (Kaggle) is used in this study. It contains 2D structural MRI slices grouped into four Alzheimer’s disease stages.
@@ -61,11 +59,11 @@ The best model checkpoint was selected based on validation accuracy.
 
 Quantitative Results
 
-Validation accuracy (Keras): ~0.76
+Validation accuracy (Keras) was approximately 0.76
 
-Overall accuracy (scikit-learn): ~0.46
+Overall accuracy (scikit-learn) was approximately 0.46 and
 
-Macro-average F1 score: ~0.28
+Macro-average F1 score was approximately 0.28
 
 The difference between Keras accuracy and scikit-learn metrics reflects the strong class imbalance in the dataset.
 
@@ -82,17 +80,17 @@ The normalized confusion matrix on the validation set is shown below.
 ![Confusion Matrix](results/confusion_matrix.png)
 
 
-The model performs best on Non-demented samples. Early-stage classes (Very mild and Mild dementia) are more difficult to distinguish due to vague anatomical differences and limited samples.
+The model detected Non-demented samples best while early-stage classes (Very mild and Mild dementia) are more difficult to distinguish due to limited samples.
 
 Ablation Study
 
 Several ablation experiments were conducted to evaluate the effect of different components:
 
-Without class weights: recall drops significantly for minority classes
+Without class weights the recall drops significantly for minority classes
 
-Without data augmentation: validation performance decreases
+Without data augmentation the validation performance decreases
 
-Reduced dropout: increased overfitting is observed
+Reduced dropout increased overfitting was observed
 
 These experiments confirm that both augmentation and class weighting are important for this task.
 

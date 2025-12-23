@@ -73,9 +73,14 @@ Training Curves
 
 The following figure shows training and validation accuracy and loss across epochs.
 
+![Training Curves](results/training_curves.png)
+
 Confusion Matrix
 
 The normalized confusion matrix on the validation set is shown below.
+
+![Confusion Matrix](results/confusion_matrix.png)
+
 
 The model performs best on Non-demented samples. Early-stage classes (Very mild and Mild dementia) are more difficult to distinguish due to vague anatomical differences and limited samples.
 

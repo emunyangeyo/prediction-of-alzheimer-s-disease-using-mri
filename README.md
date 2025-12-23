@@ -18,7 +18,7 @@ Moderate dementia
 
 Dataset
 
-The ImagesOASIS dataset (Kaggle) is used in this study. It contains 2D structural MRI slices grouped into four Alzheimer’s disease stages.
+In this study we use the ImageOASIS dataset which is pubicly available on Kaggle (https://www.kaggle.com/datasets/ninadaithal/imagesoasis). It contains 2D structural MRI slices grouped into four Alzheimer’s disease stages.
 
 The dataset is strongly imbalanced. Non-demented samples account for the majority of images, while Moderate dementia samples are fewer.
 

@@ -1,7 +1,5 @@
 Prediction of Alzheimer’s Disease from Structural MRI Scans Using Modified DenseNet CNN
 
-This repository contains the code and experiments for a university course project on Alzheimer’s disease classification from structural MRI images.
-
 The project studies how a pretrained convolutional neural network can be applied to a highly imbalanced medical imaging dataset, and how data augmentation and class weighting affect performance.
 
 Overview
@@ -24,9 +22,9 @@ Dataset
 
 The ImagesOASIS dataset (Kaggle) is used in this study. It contains 2D structural MRI slices grouped into four Alzheimer’s disease stages.
 
-The dataset is strongly imbalanced. Non-demented samples account for the majority of images, while Moderate dementia samples are rare.
+The dataset is strongly imbalanced. Non-demented samples account for the majority of images, while Moderate dementia samples are fewer.
 
-An 80/20 train–validation split is applied using Keras’ built-in validation_split. Validation data is not shuffled to ensure consistent evaluation.
+An 80/20 train–validation split is applied using Keras’ built-in validation_split. 
 
 Method
 Model
@@ -79,7 +77,7 @@ Confusion Matrix
 
 The normalized confusion matrix on the validation set is shown below.
 
-The model performs best on Non-demented samples. Early-stage classes (Very mild and Mild dementia) are more difficult to distinguish due to subtle anatomical differences and limited samples.
+The model performs best on Non-demented samples. Early-stage classes (Very mild and Mild dementia) are more difficult to distinguish due to vague anatomical differences and limited samples.
 
 Ablation Study
 

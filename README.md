@@ -1,8 +1,8 @@
-Prediction of Alzheimer’s Disease from Structural MRI Scans Using Modified DenseNet CNN
+### Prediction of Alzheimer’s Disease from Structural MRI Scans Using Modified DenseNet CNN
 
 The project studies how a pretrained convolutional neural network can be applied to a highly imbalanced medical imaging dataset, and how data augmentation and class weighting affect performance.
 
-Overview
+## Overview
 
 Alzheimer’s disease causes progressive cognitive decline and structural brain changes that can be observed in MRI scans. Manual analysis of MRI images is time-consuming and can vary between observers.
 
@@ -16,7 +16,7 @@ Mild dementia
 
 Moderate dementia
 
-Dataset
+## Dataset
 
 In this study we use the ImageOASIS dataset which is pubicly available on Kaggle (https://www.kaggle.com/datasets/ninadaithal/imagesoasis). It contains 2D structural MRI slices grouped into four Alzheimer’s disease stages.
 
@@ -24,8 +24,8 @@ The dataset is strongly imbalanced. Non-demented samples account for the majorit
 
 An 80/20 train–validation split is applied using Keras’ built-in validation_split. 
 
-Method
-Model
+### Method
+## Model
 
 DenseNet121 pretrained on ImageNet is used as a feature extractor
 
@@ -41,7 +41,7 @@ Dropout and batch normalization
 
 Softmax output for four classes
 
-Training Strategy
+## Training Strategy
 
 Data augmentation is applied only to the training set
 
@@ -53,7 +53,7 @@ Early stopping and learning rate reduction are enabled
 
 Training was performed in a Kaggle GPU environment.
 
-Results
+## Results
 
 The best model checkpoint was selected based on validation accuracy.
 
@@ -67,13 +67,13 @@ Macro-average F1 score was approximately 0.28
 
 The difference between Keras accuracy and scikit-learn metrics reflects the strong class imbalance in the dataset.
 
-Training Curves
+## Training Curves
 
 The following figure shows training and validation accuracy and loss across epochs.
 
 ![Training Curves](results/training_curves.png)
 
-Confusion Matrix
+## Confusion Matrix
 
 The normalized confusion matrix on the validation set is shown below.
 
@@ -82,7 +82,7 @@ The normalized confusion matrix on the validation set is shown below.
 
 The model detected Non-demented samples best while early-stage classes (Very mild and Mild dementia) are more difficult to distinguish due to limited samples.
 
-Ablation Study
+## Ablation Study
 
 Several ablation experiments were conducted to evaluate the effect of different components:
 
@@ -94,7 +94,7 @@ Reduced dropout increased overfitting was observed
 
 These experiments confirm that both augmentation and class weighting are important for this task.
 
-Limitations
+## Limitations
 
 Only 2D MRI slices are used (no 3D spatial context)
 
@@ -104,6 +104,6 @@ Evaluation is performed on a single dataset
 
 Results are not suitable for clinical use
 
-The full training and evaluation pipeline is provided in the notebook located in the `notebook/` directory.
+### The full training and evaluation pipeline is provided in the notebook located in the `notebook/` directory.
 
 
